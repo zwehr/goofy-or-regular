@@ -1,0 +1,508 @@
+[
+  {
+    "skater": "Andrew Reynolds",
+    "id": 1,
+    "stance": "regular",
+    "image": "andrew-reynolds.jpeg"
+  },
+  {
+    "skater": "Bastien Salabanzi",
+    "id": 2,
+    "stance": "regular",
+    "image": "bastien-salabanzi.jpeg"
+  },
+  {
+    "skater": "Chaz Ortiz",
+    "id": 3,
+    "stance": "regular",
+    "image": "chaz-ortiz.jpeg"
+  },
+  {
+    "skater": "Gilbert Crockett",
+    "id": 4,
+    "stance": "regular",
+    "image": "gilbert-crockett.jpeg"
+  },
+  {
+    "skater": "Jamie Foy",
+    "id": 5,
+    "stance": "regular",
+    "image": "jamie-foy.jpeg"
+  },
+  {
+    "skater": "Zion Wright",
+    "id": 6,
+    "stance": "regular",
+    "image": "zion-wright.jpeg"
+  },
+  {
+    "skater": "Kader Sylla",
+    "id": 7,
+    "stance": "goofy",
+    "image": "kader-sylla.jpeg"
+  },
+  {
+    "skater": "Danny Way",
+    "id": 8,
+    "stance": "regular",
+    "image": "danny-way.jpeg"
+  },
+  {
+    "skater": "Tyshawn Jones",
+    "id": 9,
+    "stance": "regular",
+    "image": "tyshawn-jones.jpeg"
+  },
+  {
+    "skater": "Andrew Allen",
+    "id": 10,
+    "stance": "regular",
+    "image": "andrew-allen.jpeg"
+  },
+  {
+    "skater": "Bobby de Keyzer",
+    "id": 11,
+    "stance": "regular",
+    "image": "bobby-de-keyzer.jpeg"
+  },
+  {
+    "skater": "Erik Ellington",
+    "id": 12,
+    "stance": "goofy",
+    "image": "erik-ellington.jpeg"
+  },
+  {
+    "skater": "Fred Gall",
+    "id": 13,
+    "stance": "regular",
+    "image": "fred-gall.jpeg"
+  },
+  {
+    "skater": "Rowan Zorilla",
+    "id": 14,
+    "stance": "goofy",
+    "image": "rowan-zorilla.jpeg"
+  },
+  {
+    "skater": "Franky Villani",
+    "id": 15,
+    "stance": "regular",
+    "image": "franky-villani.jpeg"
+  },
+  {
+    "skater": "Tiago Lemos",
+    "id": 16,
+    "stance": "goofy",
+    "image": "tiago-lemos.jpeg"
+  },
+  {
+    "skater": "Tony Hawk",
+    "id": 17,
+    "stance": "goofy",
+    "image": "tony-hawk.jpeg"
+  },
+  {
+    "skater": "Bob Burnquist",
+    "id": 18,
+    "stance": "regular",
+    "image": "bob-burnquist.jpeg"
+  },
+  {
+    "skater": "Jerry Hsu",
+    "id": 19,
+    "stance": "goofy",
+    "image": "jerry-hsu.jpeg"
+  },
+  {
+    "skater": "Kevin \"Spanky\" Long",
+    "id": 20,
+    "stance": "goofy",
+    "image": "kevin-long.jpeg"
+  },
+  {
+    "skater": "Daewon Song",
+    "id": 21,
+    "stance": "goofy",
+    "image": "daewon-song.jpeg"
+  },
+  {
+    "skater": "Rodney Mullen",
+    "id": 22,
+    "stance": "regular",
+    "image": "rodney-mullen.jpeg"
+  },
+  {
+    "skater": "Chris Haslam",
+    "id": 23,
+    "stance": "goofy",
+    "image": "chris-haslam.jpeg"
+  },
+  {
+    "skater": "Nora Vasconcellos",
+    "id": 24,
+    "stance": "regular",
+    "image": "nora-vasconcellos.jpeg"
+  },
+  {
+    "skater": "Lizzie Armanto",
+    "id": 25,
+    "stance": "regular",
+    "image": "lizzie-armanto.jpeg"
+  },
+  {
+    "skater": "Heath Kirchart",
+    "id": 26,
+    "stance": "goofy",
+    "image": "heath-kirchart.jpeg"
+  },
+  {
+    "skater": "Cory Kennedy",
+    "id": 27,
+    "stance": "regular",
+    "image": "cory-kennedy.jpeg"
+  },
+  {
+    "skater": "Dylan Rieder",
+    "id": 28,
+    "stance": "goofy",
+    "image": "dylan-rieder.jpeg"
+  },
+  {
+    "skater": "John Shanahan",
+    "id": 29,
+    "stance": "regular",
+    "image": "john-shanahan.jpeg"
+  },
+  {
+    "skater": "Josh Kalis",
+    "id": 30,
+    "stance": "goofy",
+    "image": "josh-kalis.jpeg"
+  },
+  {
+    "skater": "Sage Elsesser",
+    "id": 31,
+    "stance": "regular",
+    "image": "sage-elsesser.jpeg"
+  },
+  {
+    "skater": "Mark Gonzales",
+    "id": 32,
+    "stance": "goofy",
+    "image": "mark-gonzales.jpeg"
+  },
+  {
+    "skater": "Tom Knox",
+    "id": 33,
+    "stance": "goofy",
+    "image": "tom-knox.jpeg"
+  },
+  {
+    "skater": "Casper Brooker",
+    "id": 34,
+    "stance": "regular",
+    "image": "casper-brooker.jpeg"
+  },
+  {
+    "skater": "Chad Muska",
+    "id": 35,
+    "stance": "regular",
+    "image": "chad-muska.jpeg"
+  },
+  {
+    "skater": "Eric Koston",
+    "id": 36,
+    "stance": "goofy",
+    "image": "eric-koston.jpeg"
+  },
+  {
+    "skater": "Mason Silva",
+    "id": 37,
+    "stance": "regular",
+    "image": "mason-silva.jpeg"
+  },
+  {
+    "skater": "Antonio Durao",
+    "id": 38,
+    "stance": "goofy",
+    "image": "antonio-durao.jpeg"
+  },
+  {
+    "skater": "Sean Pablo",
+    "id": 39,
+    "stance": "regular",
+    "image": "sean-pablo.jpeg"
+  },
+  {
+    "skater": "Austyn Gillette",
+    "id": 40,
+    "stance": "regular",
+    "image": "austyn-gillette.jpeg"
+  },
+  {
+    "skater": "Anthony Pappalardo",
+    "id": 41,
+    "stance": "regular",
+    "image": "anthony-pappalardo.jpeg"
+  },
+  {
+    "skater": "Geoff Rowley",
+    "id": 42,
+    "stance": "regular",
+    "image": "geoff-rowley.jpeg"
+  },
+  {
+    "skater": "Rune Glifberg",
+    "id": 43,
+    "stance": "regular",
+    "image": "rune-glifberg.jpeg"
+  },
+  {
+    "skater": "Neen Williams",
+    "id": 44,
+    "stance": "goofy",
+    "image": "neen-williams.jpeg"
+  },
+  {
+    "skater": "Anthony Van Engelen",
+    "id": 45,
+    "stance": "regular",
+    "image": "anthony-van-engelen.jpeg"
+  },
+  {
+    "skater": "Tyson Peterson",
+    "id": 46,
+    "stance": "goofy",
+    "image": "tyson-peterson.jpeg"
+  },
+  {
+    "skater": "Ishod Wair",
+    "id": 47,
+    "stance": "goofy",
+    "image": "ishod-wair.jpeg"
+  },
+  {
+    "skater": "Wade Desarmo",
+    "id": 48,
+    "stance": "goofy",
+    "image": "wade-desarmo.jpeg"
+  },
+  {
+    "skater": "Mark Suciu",
+    "id": 49,
+    "stance": "goofy",
+    "image": "mark-suciu.jpeg"
+  },
+  {
+    "skater": "Paul Rodriguez",
+    "id": 50,
+    "stance": "goofy",
+    "image": "paul-rodriguez.jpeg"
+  },
+  {
+    "skater": "Pedro Delfino",
+    "id": 51,
+    "stance": "goofy",
+    "image": "pedro-delfino.jpeg"
+  },
+  {
+    "skater": "Chris Joslin",
+    "id": 52,
+    "stance": "regular",
+    "image": "chris-joslin.jpeg"
+  },
+  {
+    "skater": "Louie Barletta",
+    "id": 53,
+    "stance": "goofy",
+    "image": "louie-barletta.jpeg"
+  },
+  {
+    "skater": "Didrik \"Deedz\" Galasso",
+    "id": 54
+  },
+  {
+    "skater": "PJ Ladd",
+    "id": 55
+  },
+  {
+    "skater": "Nyjah Huston",
+    "id": 56
+  },
+  {
+    "skater": "Luan Oliveira",
+    "id": 57
+  },
+  {
+    "skater": "Rayssa Leal",
+    "id": 58
+  },
+  {
+    "skater": "Leticia Bufoni",
+    "id": 59
+  },
+  {
+    "skater": "Elissa Steamer",
+    "id": 60
+  },
+  {
+    "skater": "Kevin Bradley",
+    "id": 61
+  },
+  {
+    "skater": "Alex Olson",
+    "id": 62
+  },
+  {
+    "skater": "Brian Anderson",
+    "id": 63
+  },
+  {
+    "skater": "Max Palmer",
+    "id": 64
+  },
+  {
+    "skater": "Cyrus Bennett",
+    "id": 65
+  },
+  {
+    "skater": "Torey Pudwill",
+    "id": 66
+  },
+  {
+    "skater": "Aidan Mackey",
+    "id": 67
+  },
+  {
+    "skater": "Milton Martinez",
+    "id": 68
+  },
+  {
+    "skater": "Giovanni Vianna",
+    "id": 69
+  },
+  {
+    "skater": "Carlos Ribeiro",
+    "id": 70
+  },
+  {
+    "skater": "Jamal Smith",
+    "id": 71
+  },
+  {
+    "skater": "Carl Aikens",
+    "id": 72
+  },
+  {
+    "skater": "Alexis Sablone",
+    "id": 73
+  },
+  {
+    "skater": "Lee Yankou",
+    "id": 74
+  },
+  {
+    "skater": "Mike Arnold",
+    "id": 75
+  },
+  {
+    "skater": "Kyle Walker",
+    "id": 76
+  },
+  {
+    "skater": "Wes Kremer",
+    "id": 77
+  },
+  {
+    "skater": "Grant Taylor",
+    "id": 78
+  },
+  {
+    "skater": "Chris Cole",
+    "id": 79
+  },
+  {
+    "skater": "Marc Johnson",
+    "id": 80
+  },
+  {
+    "skater": "Arto Saari",
+    "id": 81
+  },
+  {
+    "skater": "Mike Carroll",
+    "id": 82
+  },
+  {
+    "skater": "John Cardiel",
+    "id": 83
+  },
+  {
+    "skater": "Leo Romero",
+    "id": 84
+  },
+  {
+    "skater": "Jake Johnson",
+    "id": 85
+  },
+  {
+    "skater": "Yuto Horigome",
+    "id": 86
+  },
+  {
+    "skater": "Shane O'Neill",
+    "id": 87
+  },
+  {
+    "skater": "Justin Henry",
+    "id": 88
+  },
+  {
+    "skater": "Oskar \"Oski\" Rozenberg Hallberg",
+    "id": 89
+  },
+  {
+    "skater": "Ville Wester",
+    "id": 90
+  },
+  {
+    "skater": "Dane Burman",
+    "id": 91
+  },
+  {
+    "skater": "Harry Lintell",
+    "id": 92
+  },
+  {
+    "skater": "Korahn Gayle",
+    "id": 93
+  },
+  {
+    "skater": "Charlie Birch",
+    "id": 94
+  },
+  {
+    "skater": "Heitor Da Silva",
+    "id": 95
+  },
+  {
+    "skater": "Etienne Gagne",
+    "id": 96
+  },
+  {
+    "skater": "Chris “Cookie” Colbourn",
+    "id": 97
+  },
+  {
+    "skater": "Dustin Henry",
+    "id": 98
+  },
+  {
+    "skater": "John Dilo",
+    "id": 99
+  },
+  {
+    "skater": "Brad Cromer",
+    "id": 100
+  }
+]
