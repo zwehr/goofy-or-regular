@@ -32,14 +32,14 @@ function App() {
   }
 
   function newSkater() {
-    setCurrSkaterIndex(Math.floor(Math.random() * 50));
+    setCurrSkaterIndex(Math.floor(Math.random() * skaters.length));
   }
 
   return (
     <div className="App">
       <h1>Guess the Stance</h1>
       <img
-        src={require(`./images/skaters/${skaters[currSkaterIndex].image}`)}
+        src={require(`./images/${skaters[currSkaterIndex].image}`)}
         style={{ height: 200, width: 200 }}
       />
       <p>Is {skaters[currSkaterIndex].skater}</p>

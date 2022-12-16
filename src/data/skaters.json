@@ -319,190 +319,284 @@
   },
   {
     "skater": "Didrik \"Deedz\" Galasso",
-    "id": 54
+    "id": 54,
+    "stance": "regular",
+    "image": "didrik-gallasso.jpeg"
   },
   {
     "skater": "PJ Ladd",
-    "id": 55
+    "id": 55,
+    "stance": "regular",
+    "image": "pj-ladd.jpeg"
   },
   {
     "skater": "Nyjah Huston",
-    "id": 56
+    "id": 56,
+    "stance": "goofy",
+    "image": "nyjah-huston.jpeg"
   },
   {
     "skater": "Luan Oliveira",
-    "id": 57
+    "id": 57,
+    "stance": "regular",
+    "image": "luan-oliveira.jpeg"
   },
   {
     "skater": "Rayssa Leal",
-    "id": 58
+    "id": 58,
+    "stance": "goofy",
+    "image": "rayssa-leal.jpeg"
   },
   {
     "skater": "Leticia Bufoni",
-    "id": 59
+    "id": 59,
+    "stance": "goofy",
+    "image": "leticia-bufoni.jpeg"
   },
   {
     "skater": "Elissa Steamer",
-    "id": 60
+    "id": 60,
+    "stance": "regular",
+    "image": "elissa-steamer.jpeg"
   },
   {
     "skater": "Kevin Bradley",
-    "id": 61
+    "id": 61,
+    "stance": "goofy",
+    "image": "kevin-bradley.jpeg"
   },
   {
     "skater": "Alex Olson",
-    "id": 62
+    "id": 62,
+    "stance": "goofy",
+    "image": "alex-olson.jpeg"
   },
   {
     "skater": "Brian Anderson",
-    "id": 63
+    "id": 63,
+    "stance": "regular",
+    "image": "brian-anderson.jpeg"
   },
   {
     "skater": "Max Palmer",
-    "id": 64
+    "id": 64,
+    "stance": "goofy",
+    "image": "max-palmer.jpeg"
   },
   {
     "skater": "Cyrus Bennett",
-    "id": 65
+    "id": 65,
+    "stance": "goofy",
+    "image": "cyrus-bennett.jpeg"
   },
   {
     "skater": "Torey Pudwill",
-    "id": 66
+    "id": 66,
+    "stance": "regular",
+    "image": "torey-pudwill.jpeg"
   },
   {
     "skater": "Aidan Mackey",
-    "id": 67
+    "id": 67,
+    "stance": "regular",
+    "image": "aidan-mackey.jpeg"
   },
   {
     "skater": "Milton Martinez",
-    "id": 68
+    "id": 68,
+    "stance": "goofy",
+    "image": "milton-martinez.jpeg"
   },
   {
     "skater": "Giovanni Vianna",
-    "id": 69
+    "id": 69,
+    "stance": "regular",
+    "image": "giovanni-vianna.jpeg"
   },
   {
     "skater": "Carlos Ribeiro",
-    "id": 70
+    "id": 70,
+    "stance": "regular",
+    "image": "carlos-ribeiro.jpeg"
   },
   {
     "skater": "Jamal Smith",
-    "id": 71
+    "id": 71,
+    "stance": "regular",
+    "image": "jamal-smith.jpeg"
   },
   {
     "skater": "Carl Aikens",
-    "id": 72
+    "id": 72,
+    "stance": "regular",
+    "image": "carl-aikens.jpeg"
   },
   {
     "skater": "Alexis Sablone",
-    "id": 73
+    "id": 73,
+    "stance": "goofy",
+    "image": "alexis-sablone.jpeg"
   },
   {
     "skater": "Lee Yankou",
-    "id": 74
+    "id": 74,
+    "stance": "regular",
+    "image": "lee-yankou.jpeg"
   },
   {
     "skater": "Mike Arnold",
-    "id": 75
+    "id": 75,
+    "stance": "regular",
+    "image": "mike-arnold.jpeg"
   },
   {
     "skater": "Kyle Walker",
-    "id": 76
+    "id": 76,
+    "stance": "goofy",
+    "image": "kyle-walker.jpeg"
   },
   {
     "skater": "Wes Kremer",
-    "id": 77
+    "id": 77,
+    "stance": "goofy",
+    "image": "wes-kremer.jpeg"
   },
   {
     "skater": "Grant Taylor",
-    "id": 78
+    "id": 78,
+    "stance": "goofy",
+    "image": "grant-taylor.jpeg"
   },
   {
     "skater": "Chris Cole",
-    "id": 79
+    "id": 79,
+    "stance": "regular",
+    "image": "chris-cole.jpeg"
   },
   {
     "skater": "Marc Johnson",
-    "id": 80
+    "id": 80,
+    "stance": "regular",
+    "image": "marc-johnson.jpeg"
   },
   {
     "skater": "Arto Saari",
-    "id": 81
+    "id": 81,
+    "stance": "regular",
+    "image": "arto-saari.jpeg"
   },
   {
     "skater": "Mike Carroll",
-    "id": 82
+    "id": 82,
+    "stance": "goofy",
+    "image": "mike-carroll.jpeg"
   },
   {
     "skater": "John Cardiel",
-    "id": 83
+    "id": 83,
+    "stance": "goofy",
+    "image": "john-cardiel.jpeg"
   },
   {
     "skater": "Leo Romero",
-    "id": 84
+    "id": 84,
+    "stance": "regular",
+    "image": "leo-romero.jpeg"
   },
   {
     "skater": "Jake Johnson",
-    "id": 85
+    "id": 85,
+    "stance": "regular",
+    "image": "jake-johnson.jpeg"
   },
   {
     "skater": "Yuto Horigome",
-    "id": 86
+    "id": 86,
+    "stance": "goofy",
+    "image": "yuto-horigome.jpeg"
   },
   {
     "skater": "Shane O'Neill",
-    "id": 87
+    "id": 87,
+    "stance": "goofy",
+    "image": "shane-oneill.jpeg"
   },
   {
     "skater": "Justin Henry",
-    "id": 88
+    "id": 88,
+    "stance": "regular",
+    "image": "justin-henry.jpeg"
   },
   {
-    "skater": "Oskar \"Oski\" Rozenberg Hallberg",
-    "id": 89
+    "skater": "Oskar \"Oski\" Rozenberg",
+    "id": 89,
+    "stance": "regular",
+    "image": "oskar-rozenberg.jpeg"
   },
   {
     "skater": "Ville Wester",
-    "id": 90
+    "id": 90,
+    "stance": "goofy",
+    "image": "ville-wester.jpeg"
   },
   {
     "skater": "Dane Burman",
-    "id": 91
+    "id": 91,
+    "stance": "goofy",
+    "image": "dane-burman.jpeg"
   },
   {
     "skater": "Harry Lintell",
-    "id": 92
+    "id": 92,
+    "stance": "goofy",
+    "image": "harry-lintell.jpeg"
   },
   {
     "skater": "Korahn Gayle",
-    "id": 93
+    "id": 93,
+    "stance": "regular",
+    "image": "korahn-gayle.jpeg"
   },
   {
     "skater": "Charlie Birch",
-    "id": 94
+    "id": 94,
+    "stance": "regular",
+    "image": "charlie-birch.jpeg"
   },
   {
     "skater": "Heitor Da Silva",
-    "id": 95
+    "id": 95,
+    "stance": "goofy",
+    "image": "heitor-da-silva.jpeg"
   },
   {
     "skater": "Etienne Gagne",
-    "id": 96
+    "id": 96,
+    "stance": "goofy",
+    "image": "etienne-gagne.jpeg"
   },
   {
     "skater": "Chris “Cookie” Colbourn",
-    "id": 97
+    "id": 97,
+    "stance": "goofy",
+    "image": "chris-colbourn.jpeg"
   },
   {
     "skater": "Dustin Henry",
-    "id": 98
+    "id": 98,
+    "stance": "regular",
+    "image": "dustin-henry.jpeg"
   },
   {
-    "skater": "John Dilo",
-    "id": 99
+    "skater": "John \"Dilo\" Di Lorenzo",
+    "id": 99,
+    "stance": "regular",
+    "image": "john-dilo.jpeg"
   },
   {
     "skater": "Brad Cromer",
-    "id": 100
+    "id": 100,
+    "stance": "regular",
+    "image": "brad-cromer.jpeg"
   }
 ]
