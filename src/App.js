@@ -8,6 +8,11 @@ function App() {
   const [score, setScore] = useState(0);
   const [isGameStarted, setIsGameStarted] = useState(false);
   const [isGameFinished, setIsGameFinished] = useState(false);
+  const [usedIndexes, setUsedIndexes] = useState([]);
+
+  useEffect(() => {
+    console.log('usedIndexes are ', usedIndexes);
+  });
 
   function handleStartClick(e) {
     e.preventDefault();
@@ -34,11 +39,19 @@ function App() {
   }
 
   function IncorrectGuess() {
-    setIsGameFinished(true)
+    setUsedIndexes([]);
+    setIsGameFinished(true);
   }
 
   function newSkater() {
-    setCurrSkaterIndex(Math.floor(Math.random() * skaters.length));
+    let newIndex = Math.floor(Math.random() * skaters.length);
+    // while loop ensures skater index hasn't already been used (avoids duplicates)
+    while (usedIndexes.includes(newIndex)) {
+      newIndex = Math.floor(Math.random() * skaters.length)
+      console.log('trying new value ', newIndex)
+    }
+    setUsedIndexes(current => [...current, newIndex]);
+    setCurrSkaterIndex(newIndex);
   }
 
   return (
@@ -74,7 +87,6 @@ function App() {
           <GameOverPrompt score={score} handleResetClick={handleResetClick} /> :
           null
       }
-
     </div >
   );
 }

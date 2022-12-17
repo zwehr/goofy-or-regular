@@ -8,10 +8,9 @@
   left: 50%;
   width: 400px;
   height: 200px;
-  /* negative half of width above */
+  /* negative half of width above to stay centered */
   margin-left: -200px;
-  /* negative half of height above */
-  margin-top: -200px;
+  margin-top: -300px;
   border: 1px solid #000;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.61);
@@ -20,8 +19,8 @@
 }
 
 .headshot {
-  height: 200px;
-  width: 200px;
+  height: 300px;
+  width: 300px;
   border-radius: 50%;
   border: 2px solid black;
 }
