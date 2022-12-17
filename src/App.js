@@ -1,16 +1,22 @@
 import GameOverPrompt from './components/GameOverPrompt';
 import './App.css';
 import skaters from './data/skaters.json';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function App() {
-  const [currSkaterIndex, setCurrSkaterIndex] = useState(13);
+  const [currSkaterIndex, setCurrSkaterIndex] = useState(0);
   const [score, setScore] = useState(0);
-  const [isGameOver, setIsGameOver] = useState(false)
+  const [isGameStarted, setIsGameStarted] = useState(false);
+  const [isGameFinished, setIsGameFinished] = useState(false);
+
+  function handleStartClick(e) {
+    e.preventDefault();
+    setIsGameStarted(true);
+    newSkater();
+  }
 
   function handleAnswerClick(e) {
     e.preventDefault();
-    console.log(e.target.textContent.toLowerCase());
     e.target.textContent.toLowerCase() === skaters[currSkaterIndex].stance ?
       CorrectGuess() :
       IncorrectGuess()
@@ -19,7 +25,7 @@ function App() {
   function handleResetClick(e) {
     setScore(0);
     newSkater();
-    setIsGameOver(false);
+    setIsGameFinished(false);
   }
 
   function CorrectGuess() {
@@ -28,7 +34,7 @@ function App() {
   }
 
   function IncorrectGuess() {
-    setIsGameOver(true)
+    setIsGameFinished(true)
   }
 
   function newSkater() {
@@ -38,28 +44,38 @@ function App() {
   return (
     <div className="App">
       <h1>Guess the Stance</h1>
-      <img
-        src={require(`./images/${skaters[currSkaterIndex].image}`)}
-        style={{ height: 200, width: 200 }}
-      />
-      <p>Is {skaters[currSkaterIndex].skater}</p>
-      <button
-        disabled={isGameOver}
+      {isGameStarted ? <p>Score: {score}</p> : <div><button onClick={handleStartClick}>Start Game</button></div>}
+      {isGameStarted ?
+        <img
+          src={require(`./images/${skaters[currSkaterIndex].image}`)}
+          className='headshot'
+        /> :
+        <img
+          src={require('./images/question-mark-face.jpeg')}
+          className='headshot'
+        />
+      }
+      {isGameStarted ?
+        <p>Is {skaters[currSkaterIndex].skater}</p> :
+        <p>Is _____ ________</p>
+      }
+      < button
+        disabled={!isGameStarted || isGameFinished}
         onClick={handleAnswerClick}>
         GOOFY
       </button> or
-      <button
-        disabled={isGameOver}
-        onClick={handleAnswerClick}>
+      < button
+        disabled={!isGameStarted || isGameFinished}
+        onClick={handleAnswerClick} >
         REGULAR
-      </button> ?
-      <p>Score: {score}</p>
-      {isGameOver ?
-        <GameOverPrompt score={score} handleResetClick={handleResetClick} /> :
-        null
+      </button > ?
+      {
+        isGameFinished ?
+          <GameOverPrompt score={score} handleResetClick={handleResetClick} /> :
+          null
       }
 
-    </div>
+    </div >
   );
 }
 
