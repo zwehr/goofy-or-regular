@@ -1,7 +1,10 @@
 import GameOverPrompt from './components/GameOverPrompt';
-import './App.css';
 import skaters from './data/skaters.json';
 import { useState, useEffect } from 'react';
+import { db } from './firebase-config';
+import { set, ref } from 'firebase/database';
+import { uid } from 'uid';
+import './App.css';
 
 function App() {
   const [currSkaterIndex, setCurrSkaterIndex] = useState(0);
@@ -9,10 +12,37 @@ function App() {
   const [isGameStarted, setIsGameStarted] = useState(false);
   const [isGameFinished, setIsGameFinished] = useState(false);
   const [usedIndexes, setUsedIndexes] = useState([]);
+  const [countdownSeconds, setCountdownSeconds] = useState(5);
+  const [name, setName] = useState("");
+
+  // Firebase Write/Create
+  const writeDatabase = () => {
+    const uuid = uid()
+    set(ref(db, `/${uuid}`), {
+      name: name,
+      score: score,
+      uuid: uuid
+    });
+
+    setName("");
+  }
 
   useEffect(() => {
-    console.log('usedIndexes are ', usedIndexes);
-  });
+    countdownSeconds > 0 && setInterval(() => {
+      setCountdownSeconds((time) => time - .5);
+    }, 1000);
+  }, []);
+
+  useEffect(() => {
+    if (countdownSeconds === 0 && isGameStarted) {
+      endGame();
+    }
+  }, [countdownSeconds])
+
+  const handleNameChange = (e) => {
+    setName(e.target.value)
+    console.log('name is ', name)
+  }
 
   function handleStartClick(e) {
     e.preventDefault();
@@ -23,8 +53,8 @@ function App() {
   function handleAnswerClick(e) {
     e.preventDefault();
     e.target.textContent.toLowerCase() === skaters[currSkaterIndex].stance ?
-      CorrectGuess() :
-      IncorrectGuess()
+      correctGuess() :
+      endGame()
   }
 
   function handleResetClick(e) {
@@ -33,12 +63,12 @@ function App() {
     setIsGameFinished(false);
   }
 
-  function CorrectGuess() {
+  function correctGuess() {
     setScore(score + 1);
     newSkater();
   }
 
-  function IncorrectGuess() {
+  function endGame() {
     setUsedIndexes([]);
     setIsGameFinished(true);
   }
@@ -52,6 +82,7 @@ function App() {
     }
     setUsedIndexes(current => [...current, newIndex]);
     setCurrSkaterIndex(newIndex);
+    setCountdownSeconds(5);
   }
 
   return (
@@ -84,8 +115,18 @@ function App() {
       </button > ?
       {
         isGameFinished ?
-          <GameOverPrompt score={score} handleResetClick={handleResetClick} /> :
+          <GameOverPrompt
+            score={score}
+            handleResetClick={handleResetClick}
+            name={name}
+            handleNameChange={handleNameChange}
+            writeDatabase={writeDatabase}
+          /> :
           null
+      }
+      {isGameStarted && !isGameFinished ?
+        <p>Countdown: {countdownSeconds}</p> :
+        null
       }
     </div >
   );
