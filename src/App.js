@@ -127,7 +127,6 @@ function App() {
       <div>
         <LeaderBoard leaderboardScores={leaderboardScores} />
       </div>
-
     </div >
   );
 }
