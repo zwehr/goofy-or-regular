@@ -43,6 +43,7 @@ function App() {
     countdownSeconds > 0 && setInterval(() => {
       setCountdownSeconds((time) => time - 1);
     }, 1000);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
