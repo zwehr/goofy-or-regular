@@ -49,7 +49,7 @@ function App() {
     if (countdownSeconds === 0 && isGameStarted) {
       endGame();
     }
-  }, [countdownSeconds, isGameStarted])
+  })
 
   const handleNameChange = (e) => {
     setName(e.target.value)
