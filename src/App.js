@@ -43,13 +43,13 @@ function App() {
     countdownSeconds > 0 && setInterval(() => {
       setCountdownSeconds((time) => time - 1);
     }, 1000);
-  });
+  }, []);
 
   useEffect(() => {
-    if (countdownSeconds === 0 && isGameStarted) {
+    if (countdownSeconds === 0) {
       endGame();
     }
-  })
+  }, [countdownSeconds])
 
   const handleNameChange = (e) => {
     setName(e.target.value)
