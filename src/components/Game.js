@@ -7,7 +7,7 @@ function Game(props) {
           <img
             src={require(`../images/${props.skaters[props.currSkaterIndex].image}`)}
             className='headshot'
-            alt='skater headshot image'
+            alt='skater headshot'
           /> :
           <img
             src={require('../images/question-mark-face.jpeg')}
