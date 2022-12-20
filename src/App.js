@@ -1,8 +1,9 @@
 import GameOverPrompt from './components/GameOverPrompt';
+import LeaderBoard from './components/LeaderBoard';
 import skaters from './data/skaters.json';
 import { useState, useEffect } from 'react';
 import { db } from './firebase-config';
-import { set, ref } from 'firebase/database';
+import { set, ref, onValue } from 'firebase/database';
 import { uid } from 'uid';
 import './App.css';
 
@@ -12,8 +13,18 @@ function App() {
   const [isGameStarted, setIsGameStarted] = useState(false);
   const [isGameFinished, setIsGameFinished] = useState(false);
   const [usedIndexes, setUsedIndexes] = useState([]);
-  const [countdownSeconds, setCountdownSeconds] = useState(5);
+  const [countdownSeconds, setCountdownSeconds] = useState(10);
   const [name, setName] = useState("");
+  const [leaderboardScores, setLeaderboardScores] = useState([]);
+
+  // Firebase Read
+  useEffect(() => {
+    onValue(ref(db), snapshot => {
+      const data = snapshot.val();
+      const dataAsArray = Object.values(data);
+      setLeaderboardScores(dataAsArray);
+    })
+  }, [])
 
   // Firebase Write/Create
   const writeDatabase = () => {
@@ -29,7 +40,7 @@ function App() {
 
   useEffect(() => {
     countdownSeconds > 0 && setInterval(() => {
-      setCountdownSeconds((time) => time - .5);
+      setCountdownSeconds((time) => time - 1);
     }, 1000);
   }, []);
 
@@ -41,7 +52,6 @@ function App() {
 
   const handleNameChange = (e) => {
     setName(e.target.value)
-    console.log('name is ', name)
   }
 
   function handleStartClick(e) {
@@ -82,7 +92,7 @@ function App() {
     }
     setUsedIndexes(current => [...current, newIndex]);
     setCurrSkaterIndex(newIndex);
-    setCountdownSeconds(5);
+    setCountdownSeconds(10);
   }
 
   return (
@@ -93,10 +103,12 @@ function App() {
         <img
           src={require(`./images/${skaters[currSkaterIndex].image}`)}
           className='headshot'
+          alt='skater headshot image'
         /> :
         <img
           src={require('./images/question-mark-face.jpeg')}
           className='headshot'
+          alt='question mark over face graphic'
         />
       }
       {isGameStarted ?
@@ -125,9 +137,13 @@ function App() {
           null
       }
       {isGameStarted && !isGameFinished ?
-        <p>Countdown: {countdownSeconds}</p> :
+        <p>TIME LEFT: {countdownSeconds}</p> :
         null
       }
+      <div>
+        <LeaderBoard leaderboardScores={leaderboardScores} />
+      </div>
+
     </div >
   );
 }
