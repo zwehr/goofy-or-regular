@@ -43,7 +43,7 @@ function App() {
     countdownSeconds > 0 && setInterval(() => {
       setCountdownSeconds((time) => time - 1);
     }, 1000);
-  }, [countdownSeconds]);
+  });
 
   useEffect(() => {
     if (countdownSeconds === 0 && isGameStarted) {
