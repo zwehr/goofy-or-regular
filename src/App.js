@@ -1,3 +1,4 @@
+import Game from './components/Game';
 import GameOverPrompt from './components/GameOverPrompt';
 import LeaderBoard from './components/LeaderBoard';
 import skaters from './data/skaters.json';
@@ -85,12 +86,12 @@ function App() {
 
   function newSkater() {
     let newIndex = Math.floor(Math.random() * skaters.length);
-    // while loop ensures skater index hasn't already been used (avoids duplicates)
+    // While loop ensures skater index hasn't already been used (avoids duplicates)
     while (usedIndexes.includes(newIndex)) {
       newIndex = Math.floor(Math.random() * skaters.length)
       console.log('trying new value ', newIndex)
     }
-    setUsedIndexes(current => [...current, newIndex]);
+    setUsedIndexes((current) => [...current, newIndex]);
     setCurrSkaterIndex(newIndex);
     setCountdownSeconds(10);
   }
@@ -98,33 +99,15 @@ function App() {
   return (
     <div className="App">
       <h1>Guess the Stance</h1>
-      {isGameStarted ? <p>Score: {score}</p> : <div><button onClick={handleStartClick}>Start Game</button></div>}
-      {isGameStarted ?
-        <img
-          src={require(`./images/${skaters[currSkaterIndex].image}`)}
-          className='headshot'
-          alt='skater headshot image'
-        /> :
-        <img
-          src={require('./images/question-mark-face.jpeg')}
-          className='headshot'
-          alt='question mark over face graphic'
-        />
-      }
-      {isGameStarted ?
-        <p>Is {skaters[currSkaterIndex].skater}</p> :
-        <p>Is _____ ________</p>
-      }
-      < button
-        disabled={!isGameStarted || isGameFinished}
-        onClick={handleAnswerClick}>
-        GOOFY
-      </button> or
-      < button
-        disabled={!isGameStarted || isGameFinished}
-        onClick={handleAnswerClick} >
-        REGULAR
-      </button > ?
+      <Game
+        skaters={skaters}
+        currSkaterIndex={currSkaterIndex}
+        score={score}
+        isGameStarted={isGameStarted}
+        handleStartClick={handleStartClick}
+        handleAnswerClick={handleAnswerClick}
+        isGameFinished={isGameFinished}
+      />
       {
         isGameFinished ?
           <GameOverPrompt
@@ -136,9 +119,10 @@ function App() {
           /> :
           null
       }
-      {isGameStarted && !isGameFinished ?
-        <p>TIME LEFT: {countdownSeconds}</p> :
-        null
+      {
+        isGameStarted && !isGameFinished ?
+          <p>TIME LEFT: {countdownSeconds}</p> :
+          null
       }
       <div>
         <LeaderBoard leaderboardScores={leaderboardScores} />
