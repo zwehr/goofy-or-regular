@@ -17,6 +17,7 @@ function App() {
   const [countdownSeconds, setCountdownSeconds] = useState(10);
   const [name, setName] = useState("");
   const [leaderboardScores, setLeaderboardScores] = useState([]);
+  const [isScoreSubmitted, setIsScoreSubmitted] = useState(false);
 
   // Firebase Read
   useEffect(() => {
@@ -39,6 +40,11 @@ function App() {
     setName("");
   }
 
+  const handleScoreSubmit = () => {
+    writeDatabase();
+    setIsScoreSubmitted(true);
+  }
+
   useEffect(() => {
     countdownSeconds > 0 && setInterval(() => {
       setCountdownSeconds((time) => time - 1);
@@ -47,10 +53,10 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if (countdownSeconds === 0) {
+    if (countdownSeconds === 0 && isGameStarted) {
       endGame();
     }
-  }, [countdownSeconds])
+  }, [countdownSeconds, isGameStarted])
 
   const handleNameChange = (e) => {
     setName(e.target.value)
@@ -60,6 +66,7 @@ function App() {
     e.preventDefault();
     setIsGameStarted(true);
     newSkater();
+    setIsScoreSubmitted(false);
   }
 
   function handleAnswerClick(e) {
@@ -73,6 +80,7 @@ function App() {
     setScore(0);
     newSkater();
     setIsGameFinished(false);
+    setIsScoreSubmitted(false);
   }
 
   function correctGuess() {
@@ -115,7 +123,8 @@ function App() {
         name={name}
         handleNameChange={handleNameChange}
         isGameFinished={isGameFinished}
-        writeDatabase={writeDatabase}
+        handleScoreSubmit={handleScoreSubmit}
+        isScoreSubmitted={isScoreSubmitted}
       />
       {
         isGameStarted && !isGameFinished ?
