@@ -1,7 +1,7 @@
 function Game(props) {
   return (
     <div className="Game">
-      {props.isGameStarted ? <p>Score: {props.score}</p> : <div><button onClick={props.handleStartClick}>Start Game</button></div>}
+      {props.isGameStarted ? <p>Score: {props.score}</p> : <div><button className="Game-Start" onClick={props.handleStartClick}>Start Game</button></div>}
       {
         props.isGameStarted ?
           <img
@@ -18,7 +18,7 @@ function Game(props) {
       {
         props.isGameStarted ?
           <p>Is {props.skaters[props.currSkaterIndex].skater}</p> :
-          <p>Is _____ ________</p>
+          <p>Is ___________</p>
       }
       < button
         disabled={!props.isGameStarted || props.isGameFinished}
