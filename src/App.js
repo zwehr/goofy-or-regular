@@ -1,4 +1,5 @@
 import Game from './components/Game';
+import Countdown from './components/Countdown';
 import GameOverPrompt from './components/GameOverPrompt';
 import LeaderBoard from './components/LeaderBoard';
 import skaters from './data/skaters.json';
@@ -126,11 +127,7 @@ function App() {
         handleScoreSubmit={handleScoreSubmit}
         isScoreSubmitted={isScoreSubmitted}
       />
-      {
-        isGameStarted && !isGameFinished ?
-          <p>TIME LEFT: {countdownSeconds}</p> :
-          null
-      }
+      <Countdown countdownSeconds={countdownSeconds} isGameStarted={isGameStarted} isGameFinished={isGameFinished} />
       <div>
         <LeaderBoard leaderboardScores={leaderboardScores} />
       </div>
