@@ -109,17 +109,14 @@ function App() {
         handleAnswerClick={handleAnswerClick}
         isGameFinished={isGameFinished}
       />
-      {
-        isGameFinished ?
-          <GameOverPrompt
-            score={score}
-            handleResetClick={handleResetClick}
-            name={name}
-            handleNameChange={handleNameChange}
-            writeDatabase={writeDatabase}
-          /> :
-          null
-      }
+      <GameOverPrompt
+        score={score}
+        handleResetClick={handleResetClick}
+        name={name}
+        handleNameChange={handleNameChange}
+        isGameFinished={isGameFinished}
+        writeDatabase={writeDatabase}
+      />
       {
         isGameStarted && !isGameFinished ?
           <p>TIME LEFT: {countdownSeconds}</p> :
