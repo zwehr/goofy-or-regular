@@ -14,11 +14,12 @@ function App() {
   const [score, setScore] = useState(0);
   const [isGameStarted, setIsGameStarted] = useState(false);
   const [isGameFinished, setIsGameFinished] = useState(false);
-  const [usedIndexes, setUsedIndexes] = useState([]);
+  const [remainingIndexes, setRemainingIndexes] = useState([...Array(skaters.length).keys()]);
   const [countdownSeconds, setCountdownSeconds] = useState(10);
   const [name, setName] = useState("");
   const [leaderboardScores, setLeaderboardScores] = useState([]);
   const [isScoreSubmitted, setIsScoreSubmitted] = useState(false);
+  const [isEverythingAnswered, setIsEverythingAnswered] = useState(false);
 
   // Firebase Read
   useEffect(() => {
@@ -90,20 +91,23 @@ function App() {
   }
 
   function endGame() {
-    setUsedIndexes([]);
+    setRemainingIndexes([...Array(skaters.length).keys()]);
     setIsGameFinished(true);
   }
 
   function newSkater() {
-    let newIndex = Math.floor(Math.random() * skaters.length);
-    // While loop ensures skater index hasn't already been used (avoids duplicates)
-    while (usedIndexes.includes(newIndex)) {
-      newIndex = Math.floor(Math.random() * skaters.length)
-      console.log('trying new value ', newIndex)
+    if (remainingIndexes.length === 0) {
+      setIsEverythingAnswered(true);
+      endGame();
+    } else {
+      const newIndex = Math.floor(Math.random() * remainingIndexes.length);
+      const newValue = remainingIndexes[newIndex]
+      setCurrSkaterIndex(newValue);
+      setRemainingIndexes((indexArr) =>
+        indexArr.filter(index => index !== newValue)
+      )
+      setCountdownSeconds(10);
     }
-    setUsedIndexes((current) => [...current, newIndex]);
-    setCurrSkaterIndex(newIndex);
-    setCountdownSeconds(10);
   }
 
   return (
@@ -126,11 +130,16 @@ function App() {
         isGameFinished={isGameFinished}
         handleScoreSubmit={handleScoreSubmit}
         isScoreSubmitted={isScoreSubmitted}
+        isEverythingAnswered={isEverythingAnswered}
       />
-      <Countdown countdownSeconds={countdownSeconds} isGameStarted={isGameStarted} isGameFinished={isGameFinished} />
-      <div>
-        <LeaderBoard leaderboardScores={leaderboardScores} />
-      </div>
+      <Countdown
+        countdownSeconds={countdownSeconds}
+        isGameStarted={isGameStarted}
+        isGameFinished={isGameFinished}
+      />
+      <LeaderBoard
+        leaderboardScores={leaderboardScores}
+      />
     </div >
   );
 }
