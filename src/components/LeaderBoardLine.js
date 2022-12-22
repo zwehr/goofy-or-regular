@@ -1,6 +1,9 @@
 function LeaderBoardLine(props) {
   return (
-    <p>{props.name} - {props.score}</p>
+    <tr>
+      <td>{props.score}</td>
+      <td>{props.name}</td>
+    </tr>
   )
 }
 
