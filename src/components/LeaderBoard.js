@@ -14,9 +14,10 @@ function LeaderBoard(props) {
         <tbody>
           {props.leaderboardScores
             .sort(({ score: previousScore }, { score: currentScore }) => currentScore - previousScore)
-            .map((scoreLine) =>
+            .map((scoreLine, index) =>
               <LeaderBoardLine
                 key={scoreLine.uuid}
+                mapIndex={index}
                 score={scoreLine.score}
                 name={scoreLine.name}
               />
