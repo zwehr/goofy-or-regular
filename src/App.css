@@ -79,3 +79,38 @@
   backdrop-filter: blur(5px);
   border-radius: 10px;
 }
+
+.LeaderBoard-Table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.LeaderBoard-Table thead tr {
+  background-color: #379956;
+  color: #ffffff;
+  text-align: left;
+}
+
+.LeaderBoard-Table tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.LeaderBoard-Table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.LeaderBoard-Table tbody tr:last-of-type {
+  border-bottom: 2px solid #379956;
+}
+
+.LeaderBoard-Table th {
+  padding: 12px 15px;
+}
+
+.LeaderBoard-Table td {
+  padding: 12px 15px;
+}

@@ -1,6 +1,6 @@
 function LeaderBoardLine(props) {
   return (
-    <tr>
+    <tr className='LeaderBoard-Row'>
       <td>{props.score}</td>
       <td>{props.name}</td>
     </tr>

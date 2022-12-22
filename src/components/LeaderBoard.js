@@ -4,9 +4,9 @@ function LeaderBoard(props) {
   return (
     <div className='LeaderBoard'>
       <h2>Leaderboard</h2>
-      <table>
+      <table className='LeaderBoard-Table'>
         <thead>
-          <tr>
+          <tr className='LeaderBoard-Row'>
             <th>Score</th>
             <th>Name</th>
           </tr>
