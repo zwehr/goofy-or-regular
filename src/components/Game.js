@@ -17,10 +17,7 @@ function Game(props) {
       }
       {
         props.isGameStarted ?
-          <div>
-            <p>Is {props.skaters[props.currSkaterIndex].skater}</p>
-            <p>Answer: {props.skaters[props.currSkaterIndex].stance}</p>
-          </div> :
+          <p>Is {props.skaters[props.currSkaterIndex].skater}</p> :
           <p>Is ___________</p>
       }
       < button

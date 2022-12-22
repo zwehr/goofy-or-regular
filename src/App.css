@@ -3,7 +3,7 @@
 }
 
 .btn {
-  width: 110px;
+  width: 120px;
   height: 30px;
   background-color: #668ba4;
   border: none;
@@ -25,7 +25,7 @@
   border-radius: 5px;
   margin: 10px;
   height: 30px;
-  width: 100px;
+  width: 120px;
   box-shadow: 0 0 0 0 rgba(55, 153, 86, 1);
   transform: scale(1);
   animation: pulse 2s infinite;
