@@ -15,7 +15,7 @@ function GameOverPrompt(props) {
           <div>
             <p>Want to submit your score to the leaderboard?</p>
             <input type='text' placeholder='Name' value={props.name} onChange={props.handleNameChange}></input>
-            <button className='btn' onClick={props.handleScoreSubmit}>Submit Score</button>
+            <button className='btn btn-submit' onClick={props.handleScoreSubmit}>Submit Score</button>
           </div>}
 
       </div>}

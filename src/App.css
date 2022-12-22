@@ -18,6 +18,10 @@
   background-color: #86abc4
 }
 
+.btn-submit {
+  width: 140px;
+}
+
 .Game-Start {
   background: #379956;
   color: #fff;
