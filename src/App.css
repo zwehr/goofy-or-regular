@@ -14,8 +14,25 @@
   font-weight: bold;
 }
 
+.btn-disabled {
+  width: 120px;
+  height: 30px;
+  background-color: #dadada;
+  border: none;
+  color: #686868;
+  border-radius: 5px;
+  margin: 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.btn-disabled:hover {
+  cursor: not-allowed;
+}
+
 .btn:hover {
-  background-color: #86abc4
+  background-color: #86abc4;
+  cursor: pointer;
 }
 
 .btn-submit {

@@ -21,13 +21,13 @@ function Game(props) {
           <p>Is ___________</p>
       }
       < button
-        className='btn'
+        className={props.isGameStarted ? 'btn' : 'btn-disabled'}
         disabled={!props.isGameStarted || props.isGameFinished}
         onClick={props.handleAnswerClick}>
         GOOFY
       </button>or
       < button
-        className='btn'
+        className={props.isGameStarted ? 'btn' : 'btn-disabled'}
         disabled={!props.isGameStarted || props.isGameFinished
         }
         onClick={props.handleAnswerClick} >
