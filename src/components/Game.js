@@ -1,4 +1,4 @@
-function Game(props) {
+export default function Game(props) {
   return (
     <div className="Game">
       {props.isGameStarted ? <p>Score: {props.score}</p> : <div><button className="Game-Start btn" onClick={props.handleStartClick}>Start Game</button></div>}
@@ -36,5 +36,3 @@ function Game(props) {
     </div>
   )
 }
-
-export default Game;

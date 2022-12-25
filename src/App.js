@@ -64,38 +64,38 @@ function App() {
     setName(e.target.value)
   }
 
-  function handleStartClick(e) {
+  const handleStartClick = (e) => {
     e.preventDefault();
     setIsGameStarted(true);
     newSkater();
     setIsScoreSubmitted(false);
   }
 
-  function handleAnswerClick(e) {
+  const handleAnswerClick = (e) => {
     e.preventDefault();
     e.target.textContent.toLowerCase() === skaters[currSkaterIndex].stance ?
       correctGuess() :
       endGame()
   }
 
-  function handleResetClick(e) {
+  const handleResetClick = (e) => {
     setScore(0);
     newSkater();
     setIsGameFinished(false);
     setIsScoreSubmitted(false);
   }
 
-  function correctGuess() {
+  const correctGuess = () => {
     setScore(score + 1);
     newSkater();
   }
 
-  function endGame() {
+  const endGame = () => {
     setRemainingIndexes([...Array(skaters.length).keys()]);
     setIsGameFinished(true);
   }
 
-  function newSkater() {
+  const newSkater = () => {
     if (remainingIndexes.length === 0) {
       setIsEverythingAnswered(true);
       endGame();

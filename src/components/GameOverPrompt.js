@@ -1,4 +1,4 @@
-function GameOverPrompt(props) {
+export default function GameOverPrompt(props) {
   const endGameMessage = props.isEverythingAnswered ? 'YOU GOT \'EM ALL' : 'GAME OVER'
 
   return (
@@ -24,5 +24,3 @@ function GameOverPrompt(props) {
     </div>
   )
 }
-
-export default GameOverPrompt;

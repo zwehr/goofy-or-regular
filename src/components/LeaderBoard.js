@@ -1,6 +1,6 @@
 import LeaderBoardLine from "./LeaderBoardLine";
 
-function LeaderBoard(props) {
+export default function LeaderBoard(props) {
   return (
     <div className='LeaderBoard'>
       <h2>Leaderboard</h2>
@@ -27,5 +27,3 @@ function LeaderBoard(props) {
     </div>
   )
 }
-
-export default LeaderBoard;

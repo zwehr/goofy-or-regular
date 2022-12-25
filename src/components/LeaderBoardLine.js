@@ -1,6 +1,6 @@
 import { FaMedal } from "react-icons/fa";
 
-function LeaderBoardLine(props) {
+export default function LeaderBoardLine(props) {
   return (
     <tr className='LeaderBoard-Row'>
       <td>{props.score}</td>
@@ -11,5 +11,3 @@ function LeaderBoardLine(props) {
     </tr>
   )
 }
-
-export default LeaderBoardLine;
