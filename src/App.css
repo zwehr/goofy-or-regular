@@ -30,9 +30,11 @@
   cursor: not-allowed;
 }
 
-.btn:hover {
-  background-color: #86abc4;
-  cursor: pointer;
+@media (hover: hover) {
+  .btn:hover {
+    background-color: #86abc4;
+    cursor: pointer;
+  }
 }
 
 .btn-submit {
