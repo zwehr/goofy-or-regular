@@ -1,12 +1,13 @@
-import LeaderBoardLine from "./LeaderBoardLine";
+import LeaderboardLine from "./LeaderboardLine";
+import './Leaderboard.css';
 
-export default function LeaderBoard(props) {
+export default function Leaderboard(props) {
   return (
-    <div className='LeaderBoard'>
+    <div className='Leaderboard'>
       <h2>Leaderboard</h2>
-      <table className='LeaderBoard-Table'>
+      <table>
         <thead>
-          <tr className='LeaderBoard-Row'>
+          <tr>
             <th>Score</th>
             <th>Name</th>
           </tr>
@@ -15,7 +16,7 @@ export default function LeaderBoard(props) {
           {props.leaderboardScores
             .sort(({ score: previousScore }, { score: currentScore }) => currentScore - previousScore)
             .map((scoreLine, index) =>
-              <LeaderBoardLine
+              <LeaderboardLine
                 key={scoreLine.uuid}
                 mapIndex={index}
                 score={scoreLine.score}

@@ -1,7 +1,7 @@
 import Game from './components/Game';
 import Countdown from './components/Countdown';
 import GameOverPrompt from './components/GameOverPrompt';
-import LeaderBoard from './components/LeaderBoard';
+import Leaderboard from './components/Leaderboard';
 import skaters from './data/skaters.json';
 import { useState, useEffect } from 'react';
 import { db } from './firebase-config';
@@ -137,7 +137,7 @@ function App() {
         isGameStarted={isGameStarted}
         isGameFinished={isGameFinished}
       />
-      <LeaderBoard
+      <Leaderboard
         leaderboardScores={leaderboardScores}
       />
     </div >

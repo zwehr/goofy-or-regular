@@ -1,0 +1,37 @@
+.Leaderboard table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  width: 100%;
+  max-width: 800px;
+  min-width: none;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Leaderboard table thead tr {
+  background-color: #379956;
+  color: #ffffff;
+  text-align: left;
+}
+
+.Leaderboard table tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.Leaderboard table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.Leaderboard table tbody tr:last-of-type {
+  border-bottom: 2px solid #379956;
+}
+
+.Leaderboard table th {
+  padding: 12px 15px;
+  text-align: center;
+}
+
+.Leaderboard table td {
+  padding: 12px 15px;
+}

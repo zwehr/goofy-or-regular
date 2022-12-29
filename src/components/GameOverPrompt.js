@@ -1,9 +1,11 @@
+import './GameOverPrompt.css';
+
 export default function GameOverPrompt(props) {
   const endGameMessage = props.isEverythingAnswered ? 'YOU GOT \'EM ALL' : 'GAME OVER'
 
   return (
     <div className='GameOverPrompt'>
-      {props.isGameFinished && <div className='GameOverPrompt-Popup'>
+      {props.isGameFinished && <div className='popup'>
         <p>{endGameMessage}</p>
         <p>You Scored: {props.score}</p>
         <button className='btn' onClick={props.handleResetClick}>Play Again?</button>
@@ -19,7 +21,6 @@ export default function GameOverPrompt(props) {
               <button type='submit' className='btn btn-submit'>Submit Score</button>
             </form>
           </div>}
-
       </div>}
     </div>
   )
